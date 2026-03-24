@@ -10,7 +10,6 @@ public abstract class User
 
     public UserType UserType { get; set; }
 
-
     protected User(int id, string firstName, string lastName, UserType userType)
     {
         Id = id;
@@ -19,12 +18,10 @@ public abstract class User
         UserType = userType;
     }
 
-
     public string GetFullName()
     {
         return $"{FirstName} {LastName}";
     }
-
 
     public virtual string GetDisplayInfo()
     {

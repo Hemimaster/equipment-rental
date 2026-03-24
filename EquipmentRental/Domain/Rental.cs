@@ -18,7 +18,6 @@ public class Rental
 
     public decimal PenaltyAmount { get; set; }
 
-
     public bool IsReturned => ReturnDate != null;
 
     public bool IsActive => ReturnDate == null;
@@ -26,7 +25,6 @@ public class Rental
     public bool IsOverdue => DateTime.Now > DueDate && ReturnDate == null;
 
     public bool WasReturnedOnTime => ReturnDate != null && ReturnDate <= DueDate;
-
 
     public Rental(int id, User user, Equipment equipment, DateTime rentDate, int rentalDays)
     {
@@ -40,13 +38,11 @@ public class Rental
         PenaltyAmount = 0;
     }
 
-
     public void MarkAsReturned(DateTime returnDate, decimal penaltyAmount)
     {
         ReturnDate = returnDate;
         PenaltyAmount = penaltyAmount;
     }
-
 
     public string GetDisplayInfo()
     {

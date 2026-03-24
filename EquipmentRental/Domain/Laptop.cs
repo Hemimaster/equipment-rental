@@ -6,14 +6,12 @@ public class Laptop : Equipment
 
     public string Processor { get; set; }
 
-
     public Laptop(int id, string name, string brand, string model, int ramGb, string processor)
         : base(id, name, brand, model)
     {
         RamGb = ramGb;
         Processor = processor;
     }
-
 
     public override string GetDisplayInfo()
     {

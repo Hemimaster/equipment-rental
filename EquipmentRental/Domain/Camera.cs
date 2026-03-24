@@ -6,14 +6,12 @@ public class Camera : Equipment
 
     public string LensType { get; set; }
 
-
     public Camera(int id, string name, string brand, string model, int megapixels, string lensType)
         : base(id, name, brand, model)
     {
         Megapixels = megapixels;
         LensType = lensType;
     }
-
 
     public override string GetDisplayInfo()
     {

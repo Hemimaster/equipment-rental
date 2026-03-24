@@ -6,14 +6,12 @@ public class Student : User
 
     public string Faculty { get; set; }
 
-
     public Student(int id, string firstName, string lastName, string studentNumber, string faculty)
         : base(id, firstName, lastName, UserType.Student)
     {
         StudentNumber = studentNumber;
         Faculty = faculty;
     }
-
 
     public override string GetDisplayInfo()
     {

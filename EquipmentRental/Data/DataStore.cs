@@ -17,7 +17,6 @@ public class DataStore
 
     private int _rentalIdCounter;
 
-
     public DataStore()
     {
         Users = new List<User>();
@@ -29,18 +28,15 @@ public class DataStore
         _rentalIdCounter = 1;
     }
 
-
     public int GenerateUserId()
     {
         return _userIdCounter++;
     }
 
-
     public int GenerateEquipmentId()
     {
         return _equipmentIdCounter++;
     }
-
 
     public int GenerateRentalId()
     {

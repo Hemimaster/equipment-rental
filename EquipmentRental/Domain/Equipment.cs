@@ -12,7 +12,6 @@ public abstract class Equipment
 
     public EquipmentStatus Status { get; set; }
 
-
     protected Equipment(int id, string name, string brand, string model)
     {
         Id = id;
@@ -22,24 +21,20 @@ public abstract class Equipment
         Status = EquipmentStatus.Available;
     }
 
-
     public void MarkAsAvailable()
     {
         Status = EquipmentStatus.Available;
     }
-
 
     public void MarkAsRented()
     {
         Status = EquipmentStatus.Rented;
     }
 
-
     public void MarkAsUnavailable()
     {
         Status = EquipmentStatus.Unavailable;
     }
-
 
     public virtual string GetDisplayInfo()
     {
