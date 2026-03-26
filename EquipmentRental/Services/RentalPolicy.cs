@@ -23,6 +23,6 @@ public class RentalPolicy
     public string GetLimitExceededMessage(User user)
     {
         int maxActiveRentals = GetMaxActiveRentals(user);
-        return $"User has reached the maximum number of active rentals: {maxActiveRentals}.";
+        return $"{user.GetFullName()} has reached the maximum number of active rentals: {maxActiveRentals}.";
     }
 }

@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using EquipmentRental.Domain;
 
 namespace EquipmentRental.Data;

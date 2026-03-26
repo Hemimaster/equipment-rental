@@ -1,6 +1,4 @@
-using System.Collections.Generic;
-using System.Linq;
-using EquipmentRental.Common;
+    using EquipmentRental.Common;
 using EquipmentRental.Data;
 using EquipmentRental.Domain;
 
@@ -75,9 +73,14 @@ public class EquipmentService
             return OperationResult.Fail("Equipment not found.");
         }
 
+        if (equipment.Status == EquipmentStatus.Rented)
+        {
+            return OperationResult.Fail("Rented equipment cannot be marked as unavailable.");
+        }
+
         equipment.MarkAsUnavailable();
 
-        return OperationResult.Ok("Equipment marked as unavailable.");
+        return OperationResult.Ok($"{equipment.Name} has been marked as unavailable.");
     }
 
     public OperationResult MarkAsAvailable(int equipmentId)
@@ -89,8 +92,13 @@ public class EquipmentService
             return OperationResult.Fail("Equipment not found.");
         }
 
+        if (equipment.Status == EquipmentStatus.Rented)
+        {
+            return OperationResult.Fail("Rented equipment cannot be manually marked as available.");
+        }
+
         equipment.MarkAsAvailable();
 
-        return OperationResult.Ok("Equipment marked as available.");
+        return OperationResult.Ok($"{equipment.Name} has been marked as available.");
     }   
 }

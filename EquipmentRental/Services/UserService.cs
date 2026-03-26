@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
 using EquipmentRental.Common;
 using EquipmentRental.Data;
 using EquipmentRental.Domain;
