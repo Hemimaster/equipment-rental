@@ -25,6 +25,6 @@ public abstract class User
 
     public virtual string GetDisplayInfo()
     {
-        return $"{GetFullName()} ({UserType})";
+        return $"[{Id}] {GetFullName()} ({UserType})";
     }
 }

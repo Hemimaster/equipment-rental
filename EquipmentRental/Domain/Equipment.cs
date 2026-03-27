@@ -38,6 +38,6 @@ public abstract class Equipment
 
     public virtual string GetDisplayInfo()
     {
-        return $"{Name} ({Brand} {Model}) - Status: {Status}";
+        return $"[{Id}] {Name} ({Brand} {Model}) - Status: {Status}";
     }
 }
